@@ -1,6 +1,7 @@
 {
   "name": "portfolio-project",
   "version": "1.0.0",
+  "type": "module",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "myScript.js",
   "scripts": {

@@ -1,16 +1,18 @@
-class Storage {
+import UI from './display.js';
+const ui = new UI();
+
+export default class Storage {
   constructor() {
     this.collection = [];
   }
 
-  static addCollection(newBook) {
+  addCollection(newBook) {
     this.collection.push(newBook);
     localStorage.setItem('collection', JSON.stringify(this.collection));
   }
 
-  static removeFromCollection(target) {
-    const removeBook =
-      target.previousElementSibling.firstElementChild.textContent;
+  removeFromCollection(target) {
+    const removeBook = target.previousElementSibling.firstElementChild.textContent;
 
     this.collection.filter((book, index) => {
       if (book.title === removeBook) {
@@ -21,7 +23,7 @@ class Storage {
     localStorage.setItem('collection', JSON.stringify(this.collection));
   }
 
-  static getBooksFromStorage() {
+  getBooksFromStorage() {
     if (localStorage.getItem('collection') === null) {
       this.collection = [];
     } else {
@@ -30,8 +32,3 @@ class Storage {
     return this.collection;
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const allBooks = Storage.getBooksFromStorage();
-  allBooks.forEach((book) => ui.addBookToUI(book));
-});

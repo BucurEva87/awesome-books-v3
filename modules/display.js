@@ -1,12 +1,14 @@
 import Book from './add.js';
+import Storage from './storage.js';
 
+const storage = new Storage();
 const form = document.querySelector('.add-book');
 const bookList = document.querySelector('.book-list');
 
 export default function UI() {}
 
-UI.prototype.addBookToUI = function (newBook) {
-  Storage.collection.forEach((book, index) => {
+UI.prototype.addBookToUI = (newBook) => {
+  storage.getBooksFromStorage().forEach((book, index) => {
     if (book.title === newBook.title) {
       if (index % 2 === 0) {
         bookList.innerHTML += `
