@@ -1,6 +1,4 @@
 import UI from './display.js';
-const ui = new UI();
-
 export default class Storage {
   constructor() {
     this.collection = [];
@@ -12,7 +10,8 @@ export default class Storage {
   }
 
   removeFromCollection(target) {
-    const removeBook = target.previousElementSibling.firstElementChild.textContent;
+    const removeBook =
+      target.previousElementSibling.firstElementChild.textContent;
 
     this.collection.filter((book, index) => {
       if (book.title === removeBook) {

@@ -1,7 +1,7 @@
 import UI from './modules/display.js';
 import './modules/navigation.js';
 import Storage from './modules/storage.js';
-import {DateTime} from './modules/luxon.js';
+import { DateTime } from './modules/luxon.js';
 
 const ui = new UI();
 const storage = new Storage();
