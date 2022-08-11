@@ -1,4 +1,3 @@
-import Book from './add.js';
 import Storage from './storage.js';
 
 const storage = new Storage();

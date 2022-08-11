@@ -1,4 +1,3 @@
-import UI from './display.js';
 export default class Storage {
   constructor() {
     this.collection = [];
