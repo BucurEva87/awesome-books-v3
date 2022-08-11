@@ -43,5 +43,3 @@ UI.prototype.clearInputs = function (element1, element2) {
 UI.prototype.removeBookFromUI = function (target) {
   target.parentElement.remove();
 };
-
-const ui = new UI();
