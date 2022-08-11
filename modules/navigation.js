@@ -14,15 +14,3 @@ links.forEach((link) => {
     currentSection.classList.add('block');
   });
 });
-
-// function startTime() {
-//   // eslint-disable-next-line no-undef
-//   const {DateTime} = luxon;
-//   const time = DateTime.now().setZone('Africa/Lagos');
-//   const now = time.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
-
-//   document.getElementById('time').innerHTML = now;
-//   setTimeout(startTime, 1000);
-// }
-
-// startTime();
